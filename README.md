@@ -76,3 +76,36 @@
 
   1. Mock the `APIClient`'s `fetchItemsWithCallback` and call the callback block with a non-nil error in one case, and nil error in another.
   2. Partially mock the instance of `ViewController` to check if `showItems` and `showErrorAlert` are called.
+
+  Check `ViewControllerTests.m` to see how we test this.
+
+  ```objc
+  - (void)testDidTapFetchItemsButtonSuccess {
+    // create a mock APIClient
+    id testableAPIClient = [APIClient testable];
+    
+    // create a fake result for testing
+    NSString *fakeResult = @"This is a result";
+    
+    // expect fetchItemsWithCallback: to be called and invoke the callback block
+    OCMExpect([testableAPIClient fetchItemsWithCallback:([OCMArg invokeBlockWithArgs:fakeResult, [NSNull null], nil])]);
+    
+    // initiate the ViewController for testing
+    ViewController *viewController = [[ViewController alloc] init];
+    
+    // partially mock the ViewController instance
+    id partialViewControllerMock = OCMPartialMock(viewController);
+    
+    // expect showItems to be called with the fake result for testing
+    OCMExpect([partialViewControllerMock showItems:fakeResult]);
+    
+    // test didTapFetchItemsButton
+    [partialViewControllerMock didTapFetchItemsButton:nil];
+    
+    // verify expectations of APIClient mock
+    OCMVerifyAll(testableAPIClient);
+    
+    // verify expectations of partial mock of ViewController instance after a delay. Add delay because the showItems method is called inside dispatch_async
+    OCMVerifyAllWithDelay(partialViewControllerMock, 1);
+  }
+  ```
