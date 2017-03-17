@@ -22,15 +22,15 @@
   @end
   ```
 
-    And in other part of our application we call the `fetchItemsWithCallback:` method using the APIClient singleton:
+  And in other part of our application we call the `fetchItemsWithCallback:` method using the APIClient singleton:
 
-    ```objc
-    [[APIClient defaultClient] fetchItemsWithCallback:^(id result, NSError *error) {
-      // ... do something
-    }]
-    ```
+  ```objc
+  [[APIClient defaultClient] fetchItemsWithCallback:^(id result, NSError *error) {
+    // ... do something
+  }]
+  ```
 
-    To mock `fetchItemsWithCallback:` method, we need to mock the `APIClient`'s `defaultClient`:
+  To mock `fetchItemsWithCallback:` method, we need to mock the `APIClient`'s `defaultClient`:
 
   ```objc
   #import <OCMock/OCMock.h>
