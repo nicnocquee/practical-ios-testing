@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "APIClient.h"
 
 @interface ViewController ()
 
@@ -25,5 +26,25 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)didTapFetchItemsButton:(id)sender {
+    __weak typeof (self) weakSelf = self;
+    [[APIClient defaultClient] fetchItemsWithCallback:^(id result, NSError *error) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if (error) {
+                [weakSelf showErrorAlert:error];
+            } else {
+                [weakSelf showItems:result];
+            }
+        });
+    }];
+}
+
+- (void)showErrorAlert:(NSError *)error {
+    
+}
+
+- (void)showItems:(id)items {
+    
+}
 
 @end

@@ -10,6 +10,7 @@
 
 @interface ViewController : UIViewController
 
+- (IBAction)didTapFetchItemsButton:(id)sender;
 
 @end
 

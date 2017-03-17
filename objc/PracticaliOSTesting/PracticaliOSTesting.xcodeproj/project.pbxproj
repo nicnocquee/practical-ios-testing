@@ -13,8 +13,10 @@
 		03F92ADE1E7C812000412691 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03F92ADC1E7C812000412691 /* Main.storyboard */; };
 		03F92AE01E7C812000412691 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03F92ADF1E7C812000412691 /* Assets.xcassets */; };
 		03F92AE31E7C812000412691 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03F92AE11E7C812000412691 /* LaunchScreen.storyboard */; };
-		03F92AEE1E7C812000412691 /* PracticaliOSTestingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03F92AED1E7C812000412691 /* PracticaliOSTestingTests.m */; };
 		03F92AF91E7C812000412691 /* PracticaliOSTestingUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03F92AF81E7C812000412691 /* PracticaliOSTestingUITests.m */; };
+		03F92B081E7C83CB00412691 /* APIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 03F92B071E7C83CB00412691 /* APIClient.m */; };
+		03F92B0D1E7C869F00412691 /* APIClient+UnitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03F92B0C1E7C869F00412691 /* APIClient+UnitTests.m */; };
+		03F92B0F1E7C873E00412691 /* ViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03F92B0E1E7C873E00412691 /* ViewControllerTests.m */; };
 		3490AA8010C2A12C4F83270A /* Pods_PracticaliOSTestingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F1D679A34B833BEEC4B1EC8 /* Pods_PracticaliOSTestingUITests.framework */; };
 		85717000650928E4231DEFEF /* Pods_PracticaliOSTestingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3469DDB3FB115A133A988375 /* Pods_PracticaliOSTestingTests.framework */; };
 		9136ABC2F425E5AEE0738B8B /* Pods_PracticaliOSTesting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08A62EB6AE5B5EE8932D057D /* Pods_PracticaliOSTesting.framework */; };
@@ -49,11 +51,15 @@
 		03F92AE21E7C812000412691 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		03F92AE41E7C812000412691 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03F92AE91E7C812000412691 /* PracticaliOSTestingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PracticaliOSTestingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		03F92AED1E7C812000412691 /* PracticaliOSTestingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PracticaliOSTestingTests.m; sourceTree = "<group>"; };
 		03F92AEF1E7C812000412691 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03F92AF41E7C812000412691 /* PracticaliOSTestingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PracticaliOSTestingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		03F92AF81E7C812000412691 /* PracticaliOSTestingUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PracticaliOSTestingUITests.m; sourceTree = "<group>"; };
 		03F92AFA1E7C812000412691 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		03F92B061E7C83CB00412691 /* APIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIClient.h; sourceTree = "<group>"; };
+		03F92B071E7C83CB00412691 /* APIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIClient.m; sourceTree = "<group>"; };
+		03F92B0B1E7C869F00412691 /* APIClient+UnitTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "APIClient+UnitTests.h"; sourceTree = "<group>"; };
+		03F92B0C1E7C869F00412691 /* APIClient+UnitTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "APIClient+UnitTests.m"; sourceTree = "<group>"; };
+		03F92B0E1E7C873E00412691 /* ViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerTests.m; sourceTree = "<group>"; };
 		08A62EB6AE5B5EE8932D057D /* Pods_PracticaliOSTesting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PracticaliOSTesting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C1234DF02939780F77DA8C6 /* Pods-PracticaliOSTestingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PracticaliOSTestingTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PracticaliOSTestingTests/Pods-PracticaliOSTestingTests.debug.xcconfig"; sourceTree = "<group>"; };
 		11C0DA171C5CAD339716C7FA /* Pods-PracticaliOSTestingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PracticaliOSTestingUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PracticaliOSTestingUITests/Pods-PracticaliOSTestingUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -127,6 +133,8 @@
 				03F92AE11E7C812000412691 /* LaunchScreen.storyboard */,
 				03F92AE41E7C812000412691 /* Info.plist */,
 				03F92AD31E7C812000412691 /* Supporting Files */,
+				03F92B061E7C83CB00412691 /* APIClient.h */,
+				03F92B071E7C83CB00412691 /* APIClient.m */,
 			);
 			path = PracticaliOSTesting;
 			sourceTree = "<group>";
@@ -142,8 +150,10 @@
 		03F92AEC1E7C812000412691 /* PracticaliOSTestingTests */ = {
 			isa = PBXGroup;
 			children = (
-				03F92AED1E7C812000412691 /* PracticaliOSTestingTests.m */,
 				03F92AEF1E7C812000412691 /* Info.plist */,
+				03F92B0B1E7C869F00412691 /* APIClient+UnitTests.h */,
+				03F92B0C1E7C869F00412691 /* APIClient+UnitTests.m */,
+				03F92B0E1E7C873E00412691 /* ViewControllerTests.m */,
 			);
 			path = PracticaliOSTestingTests;
 			sourceTree = "<group>";
@@ -467,6 +477,7 @@
 				03F92ADB1E7C812000412691 /* ViewController.m in Sources */,
 				03F92AD81E7C812000412691 /* AppDelegate.m in Sources */,
 				03F92AD51E7C812000412691 /* main.m in Sources */,
+				03F92B081E7C83CB00412691 /* APIClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -474,7 +485,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03F92AEE1E7C812000412691 /* PracticaliOSTestingTests.m in Sources */,
+				03F92B0F1E7C873E00412691 /* ViewControllerTests.m in Sources */,
+				03F92B0D1E7C869F00412691 /* APIClient+UnitTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
