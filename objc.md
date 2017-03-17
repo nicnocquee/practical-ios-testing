@@ -109,3 +109,32 @@
     OCMVerifyAllWithDelay(partialViewControllerMock, 1);
   }
   ```
+
+### Test block property invocation
+
+Scenario: `ViewController` has a block property called `onCancelCallback`. We want to make sure when `didTapCancelButton` is called, `onCancelCallback` is also called.
+
+We can use `XCTestExpectation` to test this. Check `testOnCancelCallback` in `ViewControllerTests.m` 
+
+```objc
+- (void)testOnCancelCallback {
+    // initiate the ViewController for testing
+    ViewController *viewController = [[ViewController alloc] init];
+    
+    // create expectation
+    XCTestExpectation *callbackExpect = [self expectationWithDescription:@"callback expectation"];
+    
+    // assign a dummy callback to viewController and fulfill the expectation in it
+    viewController.onCancelCallback = ^{
+        // if this block is invoked, we fulfill the expectation and the test will pass.
+        // if you try removing the onCancelCallback invocation in didTapCancelButton method, this test will fail.
+        [callbackExpect fulfill];
+    };
+    
+    // test didTapCancelButton
+    [viewController didTapCancelButton];
+    
+    // wait for the expectation to be fulfilled
+    [self waitForExpectationsWithTimeout:0.5 handler:nil];
+}
+```

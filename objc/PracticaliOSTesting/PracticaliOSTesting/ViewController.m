@@ -47,4 +47,10 @@
     
 }
 
+- (void)didTapCancelButton {
+    if (self.onCancelCallback) {
+        self.onCancelCallback();
+    }
+}
+
 @end

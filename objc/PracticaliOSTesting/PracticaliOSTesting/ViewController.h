@@ -10,7 +10,10 @@
 
 @interface ViewController : UIViewController
 
+@property (nonatomic, copy) void (^onCancelCallback)();
+
 - (IBAction)didTapFetchItemsButton:(id)sender;
+- (void)didTapCancelButton;
 
 @end
 
