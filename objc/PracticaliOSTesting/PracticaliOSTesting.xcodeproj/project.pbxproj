@@ -1,0 +1,736 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		03F92AD51E7C812000412691 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 03F92AD41E7C812000412691 /* main.m */; };
+		03F92AD81E7C812000412691 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 03F92AD71E7C812000412691 /* AppDelegate.m */; };
+		03F92ADB1E7C812000412691 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03F92ADA1E7C812000412691 /* ViewController.m */; };
+		03F92ADE1E7C812000412691 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03F92ADC1E7C812000412691 /* Main.storyboard */; };
+		03F92AE01E7C812000412691 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03F92ADF1E7C812000412691 /* Assets.xcassets */; };
+		03F92AE31E7C812000412691 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03F92AE11E7C812000412691 /* LaunchScreen.storyboard */; };
+		03F92AEE1E7C812000412691 /* PracticaliOSTestingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03F92AED1E7C812000412691 /* PracticaliOSTestingTests.m */; };
+		03F92AF91E7C812000412691 /* PracticaliOSTestingUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03F92AF81E7C812000412691 /* PracticaliOSTestingUITests.m */; };
+		3490AA8010C2A12C4F83270A /* Pods_PracticaliOSTestingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F1D679A34B833BEEC4B1EC8 /* Pods_PracticaliOSTestingUITests.framework */; };
+		85717000650928E4231DEFEF /* Pods_PracticaliOSTestingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3469DDB3FB115A133A988375 /* Pods_PracticaliOSTestingTests.framework */; };
+		9136ABC2F425E5AEE0738B8B /* Pods_PracticaliOSTesting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08A62EB6AE5B5EE8932D057D /* Pods_PracticaliOSTesting.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		03F92AEA1E7C812000412691 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 03F92AC81E7C812000412691 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 03F92ACF1E7C812000412691;
+			remoteInfo = PracticaliOSTesting;
+		};
+		03F92AF51E7C812000412691 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 03F92AC81E7C812000412691 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 03F92ACF1E7C812000412691;
+			remoteInfo = PracticaliOSTesting;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		03F92AD01E7C812000412691 /* PracticaliOSTesting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PracticaliOSTesting.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		03F92AD41E7C812000412691 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		03F92AD61E7C812000412691 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		03F92AD71E7C812000412691 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		03F92AD91E7C812000412691 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		03F92ADA1E7C812000412691 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		03F92ADD1E7C812000412691 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		03F92ADF1E7C812000412691 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		03F92AE21E7C812000412691 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		03F92AE41E7C812000412691 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		03F92AE91E7C812000412691 /* PracticaliOSTestingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PracticaliOSTestingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		03F92AED1E7C812000412691 /* PracticaliOSTestingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PracticaliOSTestingTests.m; sourceTree = "<group>"; };
+		03F92AEF1E7C812000412691 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		03F92AF41E7C812000412691 /* PracticaliOSTestingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PracticaliOSTestingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		03F92AF81E7C812000412691 /* PracticaliOSTestingUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PracticaliOSTestingUITests.m; sourceTree = "<group>"; };
+		03F92AFA1E7C812000412691 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		08A62EB6AE5B5EE8932D057D /* Pods_PracticaliOSTesting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PracticaliOSTesting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C1234DF02939780F77DA8C6 /* Pods-PracticaliOSTestingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PracticaliOSTestingTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PracticaliOSTestingTests/Pods-PracticaliOSTestingTests.debug.xcconfig"; sourceTree = "<group>"; };
+		11C0DA171C5CAD339716C7FA /* Pods-PracticaliOSTestingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PracticaliOSTestingUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PracticaliOSTestingUITests/Pods-PracticaliOSTestingUITests.release.xcconfig"; sourceTree = "<group>"; };
+		1F1D679A34B833BEEC4B1EC8 /* Pods_PracticaliOSTestingUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PracticaliOSTestingUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3469DDB3FB115A133A988375 /* Pods_PracticaliOSTestingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PracticaliOSTestingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BD4470A2C409DEE1C48C4A0 /* Pods-PracticaliOSTestingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PracticaliOSTestingTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PracticaliOSTestingTests/Pods-PracticaliOSTestingTests.release.xcconfig"; sourceTree = "<group>"; };
+		7B091EDC1036B537F8210C57 /* Pods-PracticaliOSTestingUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PracticaliOSTestingUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PracticaliOSTestingUITests/Pods-PracticaliOSTestingUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A0C3823245118F81796790A3 /* Pods-PracticaliOSTesting.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PracticaliOSTesting.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PracticaliOSTesting/Pods-PracticaliOSTesting.debug.xcconfig"; sourceTree = "<group>"; };
+		F0E71E08E904E3E5D6688C3C /* Pods-PracticaliOSTesting.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PracticaliOSTesting.release.xcconfig"; path = "Pods/Target Support Files/Pods-PracticaliOSTesting/Pods-PracticaliOSTesting.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		03F92ACD1E7C812000412691 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9136ABC2F425E5AEE0738B8B /* Pods_PracticaliOSTesting.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03F92AE61E7C812000412691 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85717000650928E4231DEFEF /* Pods_PracticaliOSTestingTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03F92AF11E7C812000412691 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3490AA8010C2A12C4F83270A /* Pods_PracticaliOSTestingUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		03F92AC71E7C812000412691 = {
+			isa = PBXGroup;
+			children = (
+				03F92AD21E7C812000412691 /* PracticaliOSTesting */,
+				03F92AEC1E7C812000412691 /* PracticaliOSTestingTests */,
+				03F92AF71E7C812000412691 /* PracticaliOSTestingUITests */,
+				03F92AD11E7C812000412691 /* Products */,
+				6633B8E789FD059BA1FC681E /* Pods */,
+				45F9C7992C367A03A78A43F3 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		03F92AD11E7C812000412691 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				03F92AD01E7C812000412691 /* PracticaliOSTesting.app */,
+				03F92AE91E7C812000412691 /* PracticaliOSTestingTests.xctest */,
+				03F92AF41E7C812000412691 /* PracticaliOSTestingUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		03F92AD21E7C812000412691 /* PracticaliOSTesting */ = {
+			isa = PBXGroup;
+			children = (
+				03F92AD61E7C812000412691 /* AppDelegate.h */,
+				03F92AD71E7C812000412691 /* AppDelegate.m */,
+				03F92AD91E7C812000412691 /* ViewController.h */,
+				03F92ADA1E7C812000412691 /* ViewController.m */,
+				03F92ADC1E7C812000412691 /* Main.storyboard */,
+				03F92ADF1E7C812000412691 /* Assets.xcassets */,
+				03F92AE11E7C812000412691 /* LaunchScreen.storyboard */,
+				03F92AE41E7C812000412691 /* Info.plist */,
+				03F92AD31E7C812000412691 /* Supporting Files */,
+			);
+			path = PracticaliOSTesting;
+			sourceTree = "<group>";
+		};
+		03F92AD31E7C812000412691 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				03F92AD41E7C812000412691 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		03F92AEC1E7C812000412691 /* PracticaliOSTestingTests */ = {
+			isa = PBXGroup;
+			children = (
+				03F92AED1E7C812000412691 /* PracticaliOSTestingTests.m */,
+				03F92AEF1E7C812000412691 /* Info.plist */,
+			);
+			path = PracticaliOSTestingTests;
+			sourceTree = "<group>";
+		};
+		03F92AF71E7C812000412691 /* PracticaliOSTestingUITests */ = {
+			isa = PBXGroup;
+			children = (
+				03F92AF81E7C812000412691 /* PracticaliOSTestingUITests.m */,
+				03F92AFA1E7C812000412691 /* Info.plist */,
+			);
+			path = PracticaliOSTestingUITests;
+			sourceTree = "<group>";
+		};
+		45F9C7992C367A03A78A43F3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				08A62EB6AE5B5EE8932D057D /* Pods_PracticaliOSTesting.framework */,
+				3469DDB3FB115A133A988375 /* Pods_PracticaliOSTestingTests.framework */,
+				1F1D679A34B833BEEC4B1EC8 /* Pods_PracticaliOSTestingUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6633B8E789FD059BA1FC681E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A0C3823245118F81796790A3 /* Pods-PracticaliOSTesting.debug.xcconfig */,
+				F0E71E08E904E3E5D6688C3C /* Pods-PracticaliOSTesting.release.xcconfig */,
+				0C1234DF02939780F77DA8C6 /* Pods-PracticaliOSTestingTests.debug.xcconfig */,
+				6BD4470A2C409DEE1C48C4A0 /* Pods-PracticaliOSTestingTests.release.xcconfig */,
+				7B091EDC1036B537F8210C57 /* Pods-PracticaliOSTestingUITests.debug.xcconfig */,
+				11C0DA171C5CAD339716C7FA /* Pods-PracticaliOSTestingUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		03F92ACF1E7C812000412691 /* PracticaliOSTesting */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 03F92AFD1E7C812000412691 /* Build configuration list for PBXNativeTarget "PracticaliOSTesting" */;
+			buildPhases = (
+				A87E8721D2775AA9CE3D7F9E /* [CP] Check Pods Manifest.lock */,
+				03F92ACC1E7C812000412691 /* Sources */,
+				03F92ACD1E7C812000412691 /* Frameworks */,
+				03F92ACE1E7C812000412691 /* Resources */,
+				7A1503A78FF9E4858D64AB17 /* [CP] Embed Pods Frameworks */,
+				66E11F07346FFC13FC2F16DF /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PracticaliOSTesting;
+			productName = PracticaliOSTesting;
+			productReference = 03F92AD01E7C812000412691 /* PracticaliOSTesting.app */;
+			productType = "com.apple.product-type.application";
+		};
+		03F92AE81E7C812000412691 /* PracticaliOSTestingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 03F92B001E7C812000412691 /* Build configuration list for PBXNativeTarget "PracticaliOSTestingTests" */;
+			buildPhases = (
+				C1591E6E8162BEF8A342DBC0 /* [CP] Check Pods Manifest.lock */,
+				03F92AE51E7C812000412691 /* Sources */,
+				03F92AE61E7C812000412691 /* Frameworks */,
+				03F92AE71E7C812000412691 /* Resources */,
+				71D552EEDFEC87BB986A06F8 /* [CP] Embed Pods Frameworks */,
+				97656C4C1A5BEF2E7495850B /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				03F92AEB1E7C812000412691 /* PBXTargetDependency */,
+			);
+			name = PracticaliOSTestingTests;
+			productName = PracticaliOSTestingTests;
+			productReference = 03F92AE91E7C812000412691 /* PracticaliOSTestingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		03F92AF31E7C812000412691 /* PracticaliOSTestingUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 03F92B031E7C812000412691 /* Build configuration list for PBXNativeTarget "PracticaliOSTestingUITests" */;
+			buildPhases = (
+				E63A7C4AA6535B24A419C6CC /* [CP] Check Pods Manifest.lock */,
+				03F92AF01E7C812000412691 /* Sources */,
+				03F92AF11E7C812000412691 /* Frameworks */,
+				03F92AF21E7C812000412691 /* Resources */,
+				765E12DCF0C3961BD7EC80C4 /* [CP] Embed Pods Frameworks */,
+				03F78A5E621DE08293F2F87F /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				03F92AF61E7C812000412691 /* PBXTargetDependency */,
+			);
+			name = PracticaliOSTestingUITests;
+			productName = PracticaliOSTestingUITests;
+			productReference = 03F92AF41E7C812000412691 /* PracticaliOSTestingUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		03F92AC81E7C812000412691 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = DelightfulDev;
+				TargetAttributes = {
+					03F92ACF1E7C812000412691 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = NNTV3ZQR3E;
+						ProvisioningStyle = Automatic;
+					};
+					03F92AE81E7C812000412691 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = NNTV3ZQR3E;
+						LastSwiftMigration = 0820;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 03F92ACF1E7C812000412691;
+					};
+					03F92AF31E7C812000412691 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = NNTV3ZQR3E;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 03F92ACF1E7C812000412691;
+					};
+				};
+			};
+			buildConfigurationList = 03F92ACB1E7C812000412691 /* Build configuration list for PBXProject "PracticaliOSTesting" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 03F92AC71E7C812000412691;
+			productRefGroup = 03F92AD11E7C812000412691 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				03F92ACF1E7C812000412691 /* PracticaliOSTesting */,
+				03F92AE81E7C812000412691 /* PracticaliOSTestingTests */,
+				03F92AF31E7C812000412691 /* PracticaliOSTestingUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		03F92ACE1E7C812000412691 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03F92AE31E7C812000412691 /* LaunchScreen.storyboard in Resources */,
+				03F92AE01E7C812000412691 /* Assets.xcassets in Resources */,
+				03F92ADE1E7C812000412691 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03F92AE71E7C812000412691 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03F92AF21E7C812000412691 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		03F78A5E621DE08293F2F87F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PracticaliOSTestingUITests/Pods-PracticaliOSTestingUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		66E11F07346FFC13FC2F16DF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PracticaliOSTesting/Pods-PracticaliOSTesting-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		71D552EEDFEC87BB986A06F8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PracticaliOSTestingTests/Pods-PracticaliOSTestingTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		765E12DCF0C3961BD7EC80C4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PracticaliOSTestingUITests/Pods-PracticaliOSTestingUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7A1503A78FF9E4858D64AB17 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PracticaliOSTesting/Pods-PracticaliOSTesting-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		97656C4C1A5BEF2E7495850B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PracticaliOSTestingTests/Pods-PracticaliOSTestingTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A87E8721D2775AA9CE3D7F9E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C1591E6E8162BEF8A342DBC0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E63A7C4AA6535B24A419C6CC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		03F92ACC1E7C812000412691 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03F92ADB1E7C812000412691 /* ViewController.m in Sources */,
+				03F92AD81E7C812000412691 /* AppDelegate.m in Sources */,
+				03F92AD51E7C812000412691 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03F92AE51E7C812000412691 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03F92AEE1E7C812000412691 /* PracticaliOSTestingTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03F92AF01E7C812000412691 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03F92AF91E7C812000412691 /* PracticaliOSTestingUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		03F92AEB1E7C812000412691 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 03F92ACF1E7C812000412691 /* PracticaliOSTesting */;
+			targetProxy = 03F92AEA1E7C812000412691 /* PBXContainerItemProxy */;
+		};
+		03F92AF61E7C812000412691 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 03F92ACF1E7C812000412691 /* PracticaliOSTesting */;
+			targetProxy = 03F92AF51E7C812000412691 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		03F92ADC1E7C812000412691 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				03F92ADD1E7C812000412691 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		03F92AE11E7C812000412691 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				03F92AE21E7C812000412691 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		03F92AFB1E7C812000412691 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		03F92AFC1E7C812000412691 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		03F92AFE1E7C812000412691 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0C3823245118F81796790A3 /* Pods-PracticaliOSTesting.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = NNTV3ZQR3E;
+				INFOPLIST_FILE = PracticaliOSTesting/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.delightfuldev.PracticaliOSTesting;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		03F92AFF1E7C812000412691 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F0E71E08E904E3E5D6688C3C /* Pods-PracticaliOSTesting.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = NNTV3ZQR3E;
+				INFOPLIST_FILE = PracticaliOSTesting/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.delightfuldev.PracticaliOSTesting;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		03F92B011E7C812000412691 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C1234DF02939780F77DA8C6 /* Pods-PracticaliOSTestingTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = NNTV3ZQR3E;
+				INFOPLIST_FILE = PracticaliOSTestingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.delightfuldev.PracticaliOSTestingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PracticaliOSTesting.app/PracticaliOSTesting";
+			};
+			name = Debug;
+		};
+		03F92B021E7C812000412691 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6BD4470A2C409DEE1C48C4A0 /* Pods-PracticaliOSTestingTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = NNTV3ZQR3E;
+				INFOPLIST_FILE = PracticaliOSTestingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.delightfuldev.PracticaliOSTestingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PracticaliOSTesting.app/PracticaliOSTesting";
+			};
+			name = Release;
+		};
+		03F92B041E7C812000412691 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B091EDC1036B537F8210C57 /* Pods-PracticaliOSTestingUITests.debug.xcconfig */;
+			buildSettings = {
+				DEVELOPMENT_TEAM = NNTV3ZQR3E;
+				INFOPLIST_FILE = PracticaliOSTestingUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.delightfuldev.PracticaliOSTestingUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = PracticaliOSTesting;
+			};
+			name = Debug;
+		};
+		03F92B051E7C812000412691 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 11C0DA171C5CAD339716C7FA /* Pods-PracticaliOSTestingUITests.release.xcconfig */;
+			buildSettings = {
+				DEVELOPMENT_TEAM = NNTV3ZQR3E;
+				INFOPLIST_FILE = PracticaliOSTestingUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.delightfuldev.PracticaliOSTestingUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = PracticaliOSTesting;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		03F92ACB1E7C812000412691 /* Build configuration list for PBXProject "PracticaliOSTesting" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03F92AFB1E7C812000412691 /* Debug */,
+				03F92AFC1E7C812000412691 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		03F92AFD1E7C812000412691 /* Build configuration list for PBXNativeTarget "PracticaliOSTesting" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03F92AFE1E7C812000412691 /* Debug */,
+				03F92AFF1E7C812000412691 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		03F92B001E7C812000412691 /* Build configuration list for PBXNativeTarget "PracticaliOSTestingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03F92B011E7C812000412691 /* Debug */,
+				03F92B021E7C812000412691 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		03F92B031E7C812000412691 /* Build configuration list for PBXNativeTarget "PracticaliOSTestingUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03F92B041E7C812000412691 /* Debug */,
+				03F92B051E7C812000412691 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 03F92AC81E7C812000412691 /* Project object */;
+}
