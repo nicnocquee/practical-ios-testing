@@ -1,4 +1,6 @@
-- Mock singleton using OCMock. Check the file `APIClient+UnitTests.h` in the sample project. Say we have `APIClient` class:
+- Mock singleton using OCMock. 
+
+  Check the file `APIClient+UnitTests.h` in the sample project. Say we have `APIClient` class:
 
   ```objc
   @interface APIClient : NSObject <NSURLSessionDelegate>
@@ -50,3 +52,27 @@
   // stub or create expectations using the testableClient
   OCMExpect([testableAPIClient fetchItemsWithCallback:([OCMArg any]);
   ```
+
+- Test asynchronous callback.
+
+  Scenario: When a button is tapped, the app calls an API to get a list of items. We want to test the `didTapFetchItemsButton:` method of `ViewController` class. When the method is called, it should call `showItems` method when there is no error. Otherwise, it should call `showErrorAlert` method. Check `ViewController.m` in the sample project. `didTapFetchItemsButton:` is implemented as follows.
+
+  ```objc
+  - (void)didTapFetchItemsButton:(id)sender {
+    __weak typeof (self) weakSelf = self;
+    [[APIClient defaultClient] fetchItemsWithCallback:^(id result, NSError *error) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if (error) {
+                [weakSelf showErrorAlert:error];
+            } else {
+                [weakSelf showItems:result];
+            }
+        });
+    }];
+  }
+  ```
+
+  To test this scenario, we need to:
+
+  1. Mock the `APIClient`'s `fetchItemsWithCallback` and call the callback block with a non-nil error in one case, and nil error in another.
+  2. Partially mock the instance of `ViewController` to check if `showItems` and `showErrorAlert` are called.
