@@ -1,4 +1,4 @@
-- Mock singleton using OCMock. 
+### Mock singleton using OCMock. 
 
   Check the file `APIClient+UnitTests.h` in the sample project. Say we have `APIClient` class:
 
@@ -53,7 +53,7 @@
   OCMExpect([testableAPIClient fetchItemsWithCallback:([OCMArg any]);
   ```
 
-- Test asynchronous callback.
+### Test asynchronous callback.
 
   Scenario: When a button is tapped, the app calls an API to get a list of items. We want to test the `didTapFetchItemsButton:` method of `ViewController` class. When the method is called, it should call `showItems` method when there is no error. Otherwise, it should call `showErrorAlert` method. Check `ViewController.m` in the sample project. `didTapFetchItemsButton:` is implemented as follows.
 
