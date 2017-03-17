@@ -6,6 +6,7 @@ Check out [objc.md](https://github.com/nicnocquee/practical-ios-testing/blob/mas
 
 - [Mock singleton using OCMock](https://github.com/nicnocquee/practical-ios-testing/blob/master/objc.md#mock-singleton-using-ocmock)
 - [Test asynchronous callback](https://github.com/nicnocquee/practical-ios-testing/blob/master/objc.md#test-asynchronous-callback)
+- [Test block property invocation](https://github.com/nicnocquee/practical-ios-testing/blob/master/objc.md#test-block-property-invocation)
 
 ## Swift
 
