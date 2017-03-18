@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "APIClient.h"
 #import "Item.h"
+#import "ItemsTableViewController.h"
 
 @interface ViewController ()
 
@@ -44,8 +45,19 @@
     
 }
 
-- (void)showItems:(id)items {
+- (IBAction)showItems:(id)items {
+    items = [NSMutableArray arrayWithCapacity:200];
+    for (int i = 0; i < 200; i++) {
+        Item *item = [[Item alloc] init];
+        item.itemName = [NSString stringWithFormat:@"This is item %d", i];
+        item.itemDescription = [NSString stringWithFormat:@"This is the description of item %d. This the second sentence of this description.", i];
+        item.itemImage = [UIImage imageWithContentsOfFile:[[NSBundle bundleForClass:self.class] pathForResource:@"dummy_image" ofType:@"png"]];
+        [items addObject:item];
+    }
     
+    ItemsTableViewController *itemsVC = [[ItemsTableViewController alloc] initWithStyle:UITableViewStylePlain];
+    itemsVC.items = items;
+    [self.navigationController pushViewController:itemsVC animated:YES];
 }
 
 - (void)didTapCancelButton {

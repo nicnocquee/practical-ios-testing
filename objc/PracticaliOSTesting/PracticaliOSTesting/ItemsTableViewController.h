@@ -12,6 +12,6 @@
 
 @interface ItemsTableViewController : UITableViewController
 
-@property (nonatomic, copy) NSArray <Item *>* items;
+@property (nonatomic, strong) NSArray <Item *>* items;
 
 @end

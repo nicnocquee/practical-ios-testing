@@ -38,8 +38,8 @@
     itemView.itemNameLabel.text = item.itemName;
     itemView.itemDescriptionLabel.text = item.itemDescription;
     
-    [itemView setNeedsUpdateConstraints];
-    [itemView updateConstraintsIfNeeded];
+    [itemView setNeedsLayout];
+    [itemView layoutIfNeeded];
     
     CGSize fittingSize = [itemView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
     itemView.frame = CGRectMake(0, 0, 320, fittingSize.height);
@@ -59,8 +59,8 @@
     itemView.itemNameLabel.text = item.itemName;
     itemView.itemDescriptionLabel.text = item.itemDescription;
     
-    [itemView setNeedsUpdateConstraints];
-    [itemView updateConstraintsIfNeeded];
+    [itemView setNeedsLayout];
+    [itemView layoutIfNeeded];
     
     CGSize fittingSize = [itemView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
     itemView.frame = CGRectMake(0, 0, 320, fittingSize.height);
@@ -80,8 +80,8 @@
     itemView.itemNameLabel.text = item.itemName;
     itemView.itemDescriptionLabel.text = item.itemDescription;
     
-    [itemView setNeedsUpdateConstraints];
-    [itemView updateConstraintsIfNeeded];
+    [itemView setNeedsLayout];
+    [itemView layoutIfNeeded];
     
     CGSize fittingSize = [itemView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
     itemView.frame = CGRectMake(0, 0, 320, fittingSize.height);

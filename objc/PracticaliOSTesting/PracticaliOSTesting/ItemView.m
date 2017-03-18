@@ -28,7 +28,7 @@
     return self;
 }
 
-- (void)updateConstraints {
+- (void)setupConstraints {
     [self.itemImage autoSetDimensionsToSize:CGSizeMake(40, 40)];
     [self.itemImage autoPinEdgeToSuperviewEdge:ALEdgeLeft withInset:10];
     [self.itemImage autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:10];
@@ -37,46 +37,35 @@
     [self.itemNameLabel autoPinEdge:ALEdgeLeft toEdge:ALEdgeRight ofView:self.itemImage withOffset:10];
     
     [self.itemDescriptionLabel autoPinEdgeToSuperviewEdge:ALEdgeRight withInset:10 relation:NSLayoutRelationEqual];
-    [self.itemDescriptionLabel autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:10 relation:NSLayoutRelationGreaterThanOrEqual];
+    [self.itemDescriptionLabel autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:10 relation:NSLayoutRelationEqual];
     [self.itemDescriptionLabel autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:self.itemNameLabel withOffset:10];
     [self.itemDescriptionLabel autoPinEdge:ALEdgeLeft toEdge:ALEdgeLeft ofView:self.itemNameLabel];
     
-    [super updateConstraints];
+    [self.itemDescriptionLabel setContentHuggingPriority:UILayoutPriorityRequired forAxis:UILayoutConstraintAxisVertical];
+    [self.itemDescriptionLabel setContentCompressionResistancePriority:UILayoutPriorityRequired forAxis:UILayoutConstraintAxisVertical];
+    [self.itemNameLabel setContentHuggingPriority:UILayoutPriorityRequired forAxis:UILayoutConstraintAxisVertical];
+    
+    [self setContentCompressionResistancePriority:UILayoutPriorityRequired forAxis:UILayoutConstraintAxisVertical];
 }
 
 - (void)setupWithFrame:(CGRect)frame {
-    self.itemImage = [UIImageView new];
+    self.itemImage = [UIImageView newAutoLayoutView];
     self.itemImage.translatesAutoresizingMaskIntoConstraints = NO;
     
-    self.itemNameLabel = [UILabel new];
+    self.itemNameLabel = [UILabel newAutoLayoutView];
     self.itemNameLabel.numberOfLines = 0;
-    self.itemNameLabel.backgroundColor = [UIColor yellowColor];
     self.itemNameLabel.translatesAutoresizingMaskIntoConstraints = NO;
-    self.itemNameLabel.preferredMaxLayoutWidth = frame.size.width;
-    [self.itemNameLabel setContentHuggingPriority:UILayoutPriorityRequired forAxis:UILayoutConstraintAxisVertical];
     
-    self.itemDescriptionLabel = [UILabel new];
+    self.itemDescriptionLabel = [UILabel newAutoLayoutView];
     self.itemDescriptionLabel.numberOfLines = 0;
-    self.itemDescriptionLabel.backgroundColor = [UIColor redColor];
     self.itemDescriptionLabel.translatesAutoresizingMaskIntoConstraints = NO;
-    self.itemDescriptionLabel.preferredMaxLayoutWidth = frame.size.width;
-    [self.itemDescriptionLabel setContentHuggingPriority:UILayoutPriorityRequired forAxis:UILayoutConstraintAxisVertical];
-    
     
     [self addSubview:self.itemImage];
     [self addSubview:self.itemNameLabel];
     [self addSubview:self.itemDescriptionLabel];
     
     self.itemImage.contentMode = UIViewContentModeScaleAspectFit;
-}
-
-- (void)layoutSubviews {
-    [super layoutSubviews];
     
-    self.itemDescriptionLabel.preferredMaxLayoutWidth = self.itemDescriptionLabel.frame.size.width;
-    self.itemNameLabel.preferredMaxLayoutWidth = self.itemNameLabel.frame.size.height;
-    
-    [super layoutSubviews];
+    [self setupConstraints];
 }
-
 @end

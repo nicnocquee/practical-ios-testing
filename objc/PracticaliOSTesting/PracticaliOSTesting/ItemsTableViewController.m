@@ -19,7 +19,7 @@
     [super viewDidLoad];
     
     self.tableView.rowHeight = UITableViewAutomaticDimension;
-    self.tableView.estimatedRowHeight = 50;
+    self.tableView.estimatedRowHeight = 91;
     [self.tableView registerClass:[ItemTableViewCell class] forCellReuseIdentifier:@"cell"];
 }
 
@@ -37,7 +37,6 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.items.count;
 }
-
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     ItemTableViewCell *cell = (ItemTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
