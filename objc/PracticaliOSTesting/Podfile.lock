@@ -5,15 +5,18 @@ PODS:
   - FBSnapshotTestCase/SwiftSupport (2.1.4):
     - FBSnapshotTestCase/Core
   - OCMock (3.4)
+  - PureLayout (3.0.2)
 
 DEPENDENCIES:
   - FBSnapshotTestCase
   - OCMock
+  - PureLayout
 
 SPEC CHECKSUMS:
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
   OCMock: 35ae71d6a8fcc1b59434d561d1520b9dd4f15765
+  PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
 
-PODFILE CHECKSUM: 5628025a03d07ec0796cbbc203dc26891bdb7e4a
+PODFILE CHECKSUM: ab044c0ba166d92a990f3405310300fd3fadb135
 
 COCOAPODS: 1.2.0

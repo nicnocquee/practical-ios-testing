@@ -6,9 +6,13 @@
 //  Copyright © 2017 DelightfulDev. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface Item : NSObject
+
+@property (nonatomic, copy) NSString *itemName;
+@property (nonatomic, copy) NSString *itemDescription;
+@property (nonatomic, strong) UIImage *itemImage;
 
 - (void)saveItem;
 
