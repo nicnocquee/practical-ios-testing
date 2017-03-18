@@ -1,14 +1,16 @@
 ### Mock singleton using OCMock. 
 
-  Check the file `APIClient+UnitTests.h` in the sample project. Say we have `APIClient` class:
+Say we have `APIClient` class:
 
   ```objc
+  // APIClient.h
   @interface APIClient : NSObject <NSURLSessionDelegate>
 
   + (instancetype)defaultClient;
   - (void)fetchItemsWithCallback:(void(^)(NSArray *result))callback;
   @end
 
+  // APIClient.m
   @implementation APIClient
   + (instancetype)defaultClient {
       static APIClient *_sharedClient = nil;
