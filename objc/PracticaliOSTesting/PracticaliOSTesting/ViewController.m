@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "APIClient.h"
+#import "Item.h"
 
 @interface ViewController ()
 
@@ -51,6 +52,11 @@
     if (self.onCancelCallback) {
         self.onCancelCallback();
     }
+}
+
+- (void)didTapSaveItem {
+    Item *item = [[Item alloc] init];
+    [item saveItem];
 }
 
 @end

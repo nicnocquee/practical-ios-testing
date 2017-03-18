@@ -8,9 +8,6 @@
 
 #import "APIClient.h"
 
-@interface TestableAPIClient : APIClient
-@end
-
 @interface APIClient (UnitTests)
 
 /**
@@ -18,6 +15,6 @@
  
  @return Mockable APIClient
  */
-+ (TestableAPIClient *)testable;
++ (id)testable;
 
 @end

@@ -14,6 +14,7 @@
 
 - (IBAction)didTapFetchItemsButton:(id)sender;
 - (void)didTapCancelButton;
+- (void)didTapSaveItem;
 
 @end
 

@@ -9,6 +9,7 @@
 #import <XCTest/XCTest.h>
 #import "ViewController.h"
 #import "APIClient+UnitTests.h"
+#import "Item.h"
 #import <OCMock/OCMock.h>
 
 @interface ViewController (Testable)
@@ -126,6 +127,32 @@
     
     // wait for the expectation to be fulfilled
     [self waitForExpectationsWithTimeout:0.5 handler:nil];
+}
+
+
+/**
+ To test: didSaveItem
+ Given: None
+ Expected: An Item instance should be created and its saveItem method is called
+ */
+- (void)testDidTapSaveItem {
+    // initiate the ViewController for testing
+    ViewController *viewController = [[ViewController alloc] init];
+    
+    // mock Item class
+    id mockItem = OCMClassMock([Item class]);
+    
+    // stub Item's alloc and return the mock
+    OCMStub([mockItem alloc]).andReturn(mockItem);
+    
+    // expect saveItem method to be called
+    OCMExpect([mockItem saveItem]);
+    
+    // test didTapSaveItem
+    [viewController didTapSaveItem];
+    
+    // verify expectation
+    OCMVerify([mockItem saveItem]);
 }
 
 @end
