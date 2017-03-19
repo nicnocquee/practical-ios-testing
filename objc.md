@@ -67,7 +67,13 @@ Say we have `APIClient` class:
 
 ### Test asynchronous callback.
 
-  Scenario: When a button is tapped, the app calls an API to get a list of items. We want to test the `didTapFetchItemsButton:` method of `ViewController` class. When the method is called, it should call `showItems` method when there is no error. Otherwise, it should call `showErrorAlert` method. Check `ViewController.m` in the sample project. `didTapFetchItemsButton:` is implemented as follows.
+Case: When a button is tapped, the app calls an API to get a list of items. 
+
+To Test: We want to test the `didTapFetchItemsButton:` method of `ViewController` class. 
+
+Expectation: When the method is called, it should call `showItems` method when there is no error. Otherwise, it should call `showErrorAlert` method. 
+
+Check `ViewController.m` in the sample project. `didTapFetchItemsButton:` is implemented as follows.
 
   ```objc
   // ViewController.m
@@ -85,10 +91,10 @@ Say we have `APIClient` class:
   }
   ```
 
-  To test this scenario, we need to:
+To test this scenario, we need to:
 
-  1. Mock the `APIClient`'s `fetchItemsWithCallback` and call the callback block with a non-nil error in one case, and nil error in another.
-  2. Partially mock the instance of `ViewController` to check if `showItems` and `showErrorAlert` are called.
+1. Mock the `APIClient`'s `fetchItemsWithCallback` and call the callback block with a non-nil error in one case, and nil error in another.
+2. Partially mock the instance of `ViewController` to check if `showItems` and `showErrorAlert` are called.
 
   ```objc
   // ViewControllerTests.m
@@ -124,7 +130,11 @@ Say we have `APIClient` class:
 
 ### Test block property invocation
 
-Scenario: `ViewController` has a block property called `onCancelCallback`. We want to make sure when `didTapCancelButton` is called, `onCancelCallback` is also called.
+Case: `ViewController` has a block property called `onCancelCallback`. 
+
+To test: `didTapCancelButton` method.
+
+Expectation: We want to make sure when `didTapCancelButton` is called, `onCancelCallback` is also called.
 
 We can use `XCTestExpectation` to test this. Check `testOnCancelCallback` in `ViewControllerTests.m` 
 
@@ -154,7 +164,11 @@ We can use `XCTestExpectation` to test this. Check `testOnCancelCallback` in `Vi
 
 ### Test mocking an instance inside a method
 
-Scenario: When `didTapSaveItem` of `ViewController` instsance is called, we want an instance of `Item` class to be created and its `saveItem` method to be called.
+Case: `ViewController` has `didTapSaveItem` method. In that method, an instance of `Item` class is created.
+ 
+To test: Call `didTapSaveItem` method.
+
+Expectation: When `didTapSaveItem` of `ViewController` instance is called, we want an instance of `Item` class to be created and its `saveItem` method to be called.
 
 ```objc
 // ViewController.m
@@ -192,3 +206,4 @@ To test this, we need to:
     OCMVerify([mockItem saveItem]);
 }
 ```
+

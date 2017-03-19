@@ -51,7 +51,7 @@
         Item *item = [[Item alloc] init];
         item.itemName = [NSString stringWithFormat:@"This is item %d", i];
         item.itemDescription = [NSString stringWithFormat:@"This is the description of item %d. This the second sentence of this description.", i];
-        item.itemImage = [UIImage imageWithContentsOfFile:[[NSBundle bundleForClass:self.class] pathForResource:@"dummy_image" ofType:@"png"]];
+        item.itemImage = [UIImage imageNamed:@"dummy_image.png"];
         [items addObject:item];
     }
     
