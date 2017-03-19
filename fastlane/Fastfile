@@ -22,7 +22,7 @@ platform :ios do
       slather(
         ignore: [
           '*/iPhoneSimulator.sdk/*'
-        ]
+        ],
         coveralls: true,
         travis: true,
         scheme: 'PracticaliOSTesting',
