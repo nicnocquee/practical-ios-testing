@@ -344,7 +344,9 @@ Unlike the custom UIView testing, we don't instantiate `ItemTableViewCell` direc
  ### Test invocation of third party library
 
  Case: When `saveItem` instance method of `Item` class is called, the app will send analytics event to Firebase.
+ 
  To test: `saveItem` method of `Item` class.
+ 
  Expected: `logEventWithName:parameters:` class method of `FIRAnalytics` should be called.
 
  In the sample project, Firebase library is installed via Cocoapods. But for some reasons, I cannot import Firebase in the unit test target. (If you know how to do this, please let me know!). Since Firebase cannot be imported, we cannot create the mock using `OCMClassMock([FIRAnalytics class])`. But there is a workaround thanks to Objective-c's dynamic nature. All we need to do is to create `FIRAnalytics` class using `NSClassFromString(@"FIRAnalytics")`
