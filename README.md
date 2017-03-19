@@ -1,3 +1,6 @@
+[![Coverage Status](https://coveralls.io/repos/github/nicnocquee/practical-ios-testing/badge.svg?branch=master)](https://coveralls.io/github/nicnocquee/practical-ios-testing?branch=master)
+[![Build Status](https://travis-ci.org/nicnocquee/practical-ios-testing.svg?branch=master)](https://travis-ci.org/nicnocquee/practical-ios-testing)
+
 This repo showcases some examples of testing code in iOS. 
 
 ## Objective-C
