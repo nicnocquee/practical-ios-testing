@@ -207,3 +207,57 @@ To test this, we need to:
 }
 ```
 
+### Test custom UIView with snapshot testing
+
+Case: We have a custom view called `ItemView` to show the image of the item, the name of the item, and the description of the item.
+
+To test: `ItemView` render.
+
+Expectation: `ItemView` view should look like the following.
+
+![](https://github.com/nicnocquee/practical-ios-testing/blob/master/objc/PracticaliOSTesting/PracticaliOSTestingTests/ReferenceImages_64/ItemViewTests/testDefaultViewWithLongDescription@3x.png?raw=true)
+
+To test this we need to use FBSnapshotTestCase:
+
+1. Subclass `FBSnapshotTestCase` instead of `XCTestCase`
+2. Add `self.recordMode = YES;` to generate the reference image.
+3. Remove `self.recordMode = YES;` to actually test the view.
+
+```objc
+// ItemViewTests.m
+- (void)testDefaultViewWithLongDescription {
+    // uncomment the following line to generate the reference image for this test
+    // self.recordMode = YES;
+    
+    // create fake Item
+    Item *item = [[Item alloc] init];
+    item.itemName = @"This is an item name";
+    item.itemDescription = @"This is an item description. It could be a very long paragraph. This is the third sentence.";
+    item.itemImage = [UIImage imageWithContentsOfFile:[[NSBundle bundleForClass:self.class] pathForResource:@"dummy_image" ofType:@"png"]];
+    
+    // create an instance of ItemView with a fixed width and max height.
+    // this instance will be the one we test
+    ItemView *itemView = [[ItemView alloc] initWithFrame:CGRectMake(0, 0, 320, CGFLOAT_MAX)];
+    itemView.backgroundColor = [UIColor whiteColor];
+    
+    // assign the name, description, and the image to ItemView instance
+    itemView.itemImage.image = item.itemImage;
+    itemView.itemNameLabel.text = item.itemName;
+    itemView.itemDescriptionLabel.text = item.itemDescription;
+    
+    // lays out the subviews immediately
+    [itemView setNeedsLayout];
+    [itemView layoutIfNeeded];
+    
+    // find the height that will enclose the ItemView
+    CGSize fittingSize = [itemView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
+    
+    // set the height of the ItemView instance
+    itemView.frame = CGRectMake(0, 0, 320, fittingSize.height);
+    
+    // compare the instance with the reference image.
+    // if self.recordMode = YES, this test will fail but the reference image will be generated.
+    // the location of the reference images is set in the Environment Variables (FB_REFERENCE_IMAGE_DIR) of this project's scheme
+    FBSnapshotVerifyView(itemView, nil);
+}
+```
