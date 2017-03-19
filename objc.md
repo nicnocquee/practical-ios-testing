@@ -300,3 +300,43 @@ Unlike the custom UIView testing, we don't instantiate `ItemTableViewCell` direc
     FBSnapshotVerifyView(cell, nil);
 }
  ```
+
+ ### Test View Controller's View
+
+ Case: We have `ItemsTableViewController` class.
+
+ To test: The view of `ItemsTableViewController` instance.
+
+ Expected: The view should look like the following
+
+ ![](https://github.com/nicnocquee/practical-ios-testing/blob/master/objc/PracticaliOSTesting/PracticaliOSTestingTests/ReferenceImages_64/ItemTableViewControllerTests/testDefaultView@3x.png?raw=true)
+
+ ```objc
+// ItemTableViewControllerTests.m
+- (void)testDefaultView {
+    // create fake Item objects
+    NSMutableArray *items = [NSMutableArray arrayWithCapacity:20];
+    for (int i = 0; i < 20; i++) {
+        Item *item = [[Item alloc] init];
+        item.itemName = [NSString stringWithFormat:@"This is item %d", i];
+        item.itemDescription = [NSString stringWithFormat:@"This is the description of item %d. This the second sentence of this description.", i];
+        item.itemImage = [UIImage imageNamed:@"dummy_image.png"];
+        [items addObject:item];
+    }
+    
+    // instantiate ItemsTableViewController
+    ItemsTableViewController *tableVC = [[ItemsTableViewController alloc] init];
+    tableVC.edgesForExtendedLayout = UIRectEdgeNone;
+    tableVC.automaticallyAdjustsScrollViewInsets = YES;
+    
+    // assign the items
+    tableVC.items = items;
+    [tableVC.tableView reloadData];
+    
+    // embed ItemsTableViewController in a navigation controller
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:tableVC];
+    
+    // verify view
+    FBSnapshotVerifyView(navigationController.view, nil);
+}
+ ```
