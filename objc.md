@@ -217,7 +217,7 @@ Expectation: `ItemView` view should look like the following.
 
 ![](https://github.com/nicnocquee/practical-ios-testing/blob/master/objc/PracticaliOSTesting/PracticaliOSTestingTests/ReferenceImages_64/ItemViewTests/testDefaultViewWithLongDescription@3x.png?raw=true)
 
-To test this we need to use FBSnapshotTestCase:
+To test this we need to use [FBSnapshotTestCase](https://github.com/facebook/ios-snapshot-test-case):
 
 1. Subclass `FBSnapshotTestCase` instead of `XCTestCase`
 2. Add `self.recordMode = YES;` to generate the reference image.
