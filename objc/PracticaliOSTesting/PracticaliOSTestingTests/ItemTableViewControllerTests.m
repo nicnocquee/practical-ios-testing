@@ -28,7 +28,13 @@
     [super tearDown];
 }
 
+/**
+ To test: ItemsTableViewController view
+ Given: 20 Item objects
+ Expected: Check the reference image in practical-ios-testing/objc/PracticaliOSTesting/PracticaliOSTestingTests/ReferenceImages_64/ItemTableViewControllerTests/testDefaultView@3x.png
+ */
 - (void)testDefaultView {
+    // create fake Item objects
     NSMutableArray *items = [NSMutableArray arrayWithCapacity:20];
     for (int i = 0; i < 20; i++) {
         Item *item = [[Item alloc] init];
@@ -37,14 +43,72 @@
         item.itemImage = [UIImage imageNamed:@"dummy_image.png"];
         [items addObject:item];
     }
+    
+    // instantiate ItemsTableViewController
     ItemsTableViewController *tableVC = [[ItemsTableViewController alloc] init];
-    tableVC.items = items;
     tableVC.edgesForExtendedLayout = UIRectEdgeNone;
     tableVC.automaticallyAdjustsScrollViewInsets = YES;
     
+    // assign the items
+    tableVC.items = items;
+    [tableVC.tableView reloadData];
+    
+    // embed ItemsTableViewController in a navigation controller
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:tableVC];
     
+    // verify view
     FBSnapshotVerifyView(navigationController.view, nil);
+}
+
+/**
+ To test: ItemTableViewCell view
+ Given: Table view in editing mode
+ Expected: Check the reference image in practical-ios-testing/objc/PracticaliOSTesting/PracticaliOSTestingTests/ReferenceImages_64/ItemTableViewControllerTests/testEditCellView@3x.png
+ */
+- (void)testEditCellView {    
+    // create fake Item
+    Item *item = [[Item alloc] init];
+    item.itemName = @"This is an item name";
+    item.itemDescription = @"This is an item description. It could be a very long paragraph. This is the third sentence.";
+    item.itemImage = [UIImage imageWithContentsOfFile:[[NSBundle bundleForClass:self.class] pathForResource:@"dummy_image" ofType:@"png"]];
+    
+    // instantiate the ItemsTableViewController
+    ItemsTableViewController *tableVC = [[ItemsTableViewController alloc] init];
+    tableVC.items = @[item];
+    [tableVC.tableView reloadData];
+    
+    // enable editing mode
+    tableVC.editing = YES;
+    
+    // get the cell from table view
+    ItemTableViewCell *cell = (ItemTableViewCell *)[tableVC.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
+    
+    // verify the cell
+    FBSnapshotVerifyView(cell, nil);
+}
+
+/**
+ To test: ItemTableViewCell view
+ Given: Table view in normal mode (non-edit)
+ Expected: Check the reference image in practical-ios-testing/objc/PracticaliOSTesting/PracticaliOSTestingTests/ReferenceImages_64/ItemTableViewControllerTests/testDefaultCellView@3x.png
+ */
+- (void)testDefaultCellView {
+    // create fake Item
+    Item *item = [[Item alloc] init];
+    item.itemName = @"This is an item name";
+    item.itemDescription = @"This is an item description. It could be a very long paragraph. This is the third sentence.";
+    item.itemImage = [UIImage imageWithContentsOfFile:[[NSBundle bundleForClass:self.class] pathForResource:@"dummy_image" ofType:@"png"]];
+    
+    // instantiate the ItemsTableViewController
+    ItemsTableViewController *tableVC = [[ItemsTableViewController alloc] init];
+    tableVC.items = @[item];
+    [tableVC.tableView reloadData];
+    
+    // get the cell from table view
+    ItemTableViewCell *cell = (ItemTableViewCell *)[tableVC.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
+    
+    // verify the cell
+    FBSnapshotVerifyView(cell, nil);
 }
 
 @end
