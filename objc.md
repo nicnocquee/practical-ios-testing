@@ -343,7 +343,7 @@ Unlike the custom UIView testing, we don't instantiate `ItemTableViewCell` direc
 
  ### Test invocation of third party library
 
- Case: When `saveItem` instance method of `Item` class is called, the app will send analytics event to Firebase.
+ Case: When `saveItem` instance method of `Item` class is called, the app will send analytics event to [Firebase](https://firebase.google.com/docs/analytics/ios/start).
  
  To test: `saveItem` method of `Item` class.
  
