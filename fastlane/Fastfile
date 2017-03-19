@@ -20,6 +20,9 @@ platform :ios do
     )
     if is_ci?
       slather(
+        ignore: [
+          '*/iPhoneSimulator.sdk/*'
+        ]
         coveralls: true,
         travis: true,
         scheme: 'PracticaliOSTesting',
