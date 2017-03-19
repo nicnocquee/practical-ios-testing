@@ -9,6 +9,7 @@ This repo showcases some examples of testing code in iOS.
 
 - Check out [objc.md](https://github.com/nicnocquee/practical-ios-testing/blob/master/objc.md) and the accompanying sample project in `objc` folder.
 - Run `bundle install && cd objc/PracticaliOSTesting && bundle exec pod install` from the root of the repository.
+- Run the unit tests `PracticaliOSTestingTests` using iPhone 7 Plus simulator.
 
 ### TOC
 

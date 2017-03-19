@@ -9,6 +9,8 @@
 - [Test View Controller's view](#test-view-controllers-view)
 - [Test invocation of third party library](#test-invocation-of-third-party-library)
 
+**Please note that the reference images in the sample project is generated using iPhone 7 Plus. So you will need to run the test with iPhone 7 Plus simulator.**
+
 ### Mock singleton using OCMock. 
 
 Say we have `APIClient` class:
@@ -232,7 +234,11 @@ To test this we need to use [FBSnapshotTestCase](https://github.com/facebook/ios
 
 1. Subclass `FBSnapshotTestCase` instead of `XCTestCase`
 2. Add `self.recordMode = YES;` to generate the reference image.
-3. Remove `self.recordMode = YES;` to actually test the view.
+3. Run the unit test `PracticaliOSTestingTests`.
+4. Remove `self.recordMode = YES;`.
+5. Run the unit test `PracticaliOSTestingTests` again to actually test the view.
+
+**Please note that the reference images in the sample project is generated using iPhone 7 Plus. So you will need to run the test with iPhone 7 Plus simulator.**
 
 ```objc
 // ItemViewTests.m
