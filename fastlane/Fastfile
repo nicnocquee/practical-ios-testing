@@ -1,0 +1,28 @@
+fastlane_version "1.97.2"
+
+default_platform :ios
+
+platform :ios do
+  before_all do
+    cocoapods(
+      podfile: 'objc/PracticaliOSTesting/Podfile'
+    )
+  end
+
+  lane :test_objc do
+    scan(
+      device: 'iPhone 7 Plus',
+      workspace: 'objc/PracticaliOSTesting/PracticaliOSTesting.xcworkspace',
+      scheme: 'PracticaliOSTesting',
+      clean: true,
+      code_coverage: true,
+      skip_testing: 'PracticaliOSTestingUITests'
+    )
+    slather(
+      coveralls: true,
+      scheme: 'PracticaliOSTesting',
+      proj: 'objc/PracticaliOSTesting/PracticaliOSTesting.xcodeproj',
+      workspace: 'objc/PracticaliOSTesting/PracticaliOSTesting.xcworkspace'
+    )
+  end
+end
