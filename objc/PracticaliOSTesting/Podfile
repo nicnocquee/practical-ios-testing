@@ -8,6 +8,7 @@ target 'PracticaliOSTesting' do
 
   # Pods for PracticaliOSTesting
   pod 'PureLayout'
+  pod 'Firebase/Core'
 
   target 'PracticaliOSTestingTests' do
     inherit! :search_paths

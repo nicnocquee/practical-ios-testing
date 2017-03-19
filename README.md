@@ -14,6 +14,7 @@ Check out [objc.md](https://github.com/nicnocquee/practical-ios-testing/blob/mas
 - [Test custom UIView with snapshot testing](https://github.com/nicnocquee/practical-ios-testing/blob/master/objc.md#test-custom-uiview-with-snapshot-testing)
 - [Test custom UITableViewCell](https://github.com/nicnocquee/practical-ios-testing/blob/master/objc.md#test-custom-uitableviewcell)
 - [Test View Controller's view](https://github.com/nicnocquee/practical-ios-testing/blob/master/objc.md#test-view-controllers-view)
+- [Test invocation of third party library](https://github.com/nicnocquee/practical-ios-testing/blob/master/objc.md#test-invocation-of-third-party-library)
 
 ## Swift
 

@@ -340,3 +340,50 @@ Unlike the custom UIView testing, we don't instantiate `ItemTableViewCell` direc
     FBSnapshotVerifyView(navigationController.view, nil);
 }
  ```
+
+ ### Test invocation of third party library
+
+ Case: When `saveItem` instance method of `Item` class is called, the app will send analytics event to Firebase.
+ To test: `saveItem` method of `Item` class.
+ Expected: `logEventWithName:parameters:` class method of `FIRAnalytics` should be called.
+
+ In the sample project, Firebase library is installed via Cocoapods. But for some reasons, I cannot import Firebase in the unit test target. (If you know how to do this, please let me know!). Since Firebase cannot be imported, we cannot create the mock using `OCMClassMock([FIRAnalytics class])`. But there is a workaround thanks to Objective-c's dynamic nature. All we need to do is to create `FIRAnalytics` class using `NSClassFromString(@"FIRAnalytics")`
+
+ ```objc
+ // ItemTests.m
+
+ // we need the following category so that we can compile the project successfully
+@interface NSObject (TestableFIRAnalytics)
++ (void)logEventWithName:(nonnull NSString *)name
+              parameters:(nullable NSDictionary<NSString *, NSObject *> *)parameters;
+@end
+
+
+- (void)testSaveItem {
+    // create fake Item
+    Item *item = [[Item alloc] init];
+    item.itemName = @"This is an item name";
+    item.itemDescription = @"This is an item description. It could be a very long paragraph. This is the third sentence.";
+    item.itemImage = [UIImage imageWithContentsOfFile:[[NSBundle bundleForClass:self.class] pathForResource:@"dummy_image" ofType:@"png"]];
+    
+    // create FIRAnalytics mock
+    Class analyticsClass = NSClassFromString(@"FIRAnalytics");
+    id firAnalyticsMock = OCMClassMock(analyticsClass);
+    
+    // create expected parameters to be passed into logEventWithName:parameters:
+    NSDictionary *expectedParameters = @{
+                                         @"item_id": @"id-This is an item name",
+                                         @"item_name": @"This is an item name",
+                                         @"content_type": @"image"
+                                         };
+    
+    // expect logEventWithName:parameters: to be called with select_content name any parameters
+    OCMExpect([firAnalyticsMock logEventWithName:@"select_content" parameters:expectedParameters]);
+    
+    // call the method to test
+    [item saveItem];
+    
+    // verify expectation
+    OCMVerifyAll(firAnalyticsMock);
+}
+ ```
