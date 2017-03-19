@@ -1,3 +1,14 @@
+## Table of Contents
+
+- [Mock singleton using OCMock](#mock-singleton-using-ocmock)
+- [Test asynchronous callback](#test-asynchronous-callback)
+- [Test block property invocation](#test-block-property-invocation)
+- [Test instance method invocation inside another instance method](#test-mocking-an-instance-inside-a-method)
+- [Test custom UIView with snapshot testing](#test-custom-uiview-with-snapshot-testing)
+- [Test custom UITableViewCell](#test-custom-uitableviewcell)
+- [Test View Controller's view](#test-view-controllers-view)
+- [Test invocation of third party library](#test-invocation-of-third-party-library)
+
 ### Mock singleton using OCMock. 
 
 Say we have `APIClient` class:
@@ -272,7 +283,7 @@ Expected: The cell should look like the following.
 
 ![](https://github.com/nicnocquee/practical-ios-testing/blob/master/objc/PracticaliOSTesting/PracticaliOSTestingTests/ReferenceImages_64/ItemTableViewControllerTests/testEditCellView@3x.png?raw=true)
 
-Just like [snapshot testing for the custom UIView](https://github.com/nicnocquee/practical-ios-testing/blob/master/objc.md#test-custom-uiview-with-snapshot-testing), we need to use FBSnapshotTestCase again. 
+Just like [snapshot testing for the custom UIView](#test-custom-uiview-with-snapshot-testing), we need to use FBSnapshotTestCase again. 
 
 Unlike the custom UIView testing, we don't instantiate `ItemTableViewCell` directly. Instead, we create `ItemsTableViewController` instance and get the cell for testing using `cellForRowAtIndexPath` method of `UITableView`.
 
