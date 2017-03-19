@@ -20,6 +20,7 @@ platform :ios do
     )
     if is_ci?
       slather(
+        coveralls: true,
         travis: true,
         scheme: 'PracticaliOSTesting',
         proj: 'objc/PracticaliOSTesting/PracticaliOSTesting.xcodeproj',
