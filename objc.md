@@ -261,3 +261,42 @@ To test this we need to use [FBSnapshotTestCase](https://github.com/facebook/ios
     FBSnapshotVerifyView(itemView, nil);
 }
 ```
+
+### Test custom UITableViewCell
+
+Case: We have `ItemTableViewCell` class which is a custom `UITableViewCell`.
+
+Given: Editing mode in the table view.
+
+Expected: The cell should look like the following.
+
+![](https://github.com/nicnocquee/practical-ios-testing/blob/master/objc/PracticaliOSTesting/PracticaliOSTestingTests/ReferenceImages_64/ItemTableViewControllerTests/testEditCellView@3x.png?raw=true)
+
+Just like [snapshot testing for the custom UIView](https://github.com/nicnocquee/practical-ios-testing/blob/master/objc.md#test-custom-uiview-with-snapshot-testing), we need to use FBSnapshotTestCase again. 
+
+Unlike the custom UIView testing, we don't instantiate `ItemTableViewCell` directly. Instead, we create `ItemsTableViewController` instance and get the cell for testing using `cellForRowAtIndexPath` method of `UITableView`.
+
+ ```objc
+ // ItemTableViewControllerTests.m
+- (void)testEditCellView {    
+    // create fake Item
+    Item *item = [[Item alloc] init];
+    item.itemName = @"This is an item name";
+    item.itemDescription = @"This is an item description. It could be a very long paragraph. This is the third sentence.";
+    item.itemImage = [UIImage imageWithContentsOfFile:[[NSBundle bundleForClass:self.class] pathForResource:@"dummy_image" ofType:@"png"]];
+    
+    // instantiate the ItemsTableViewController
+    ItemsTableViewController *tableVC = [[ItemsTableViewController alloc] init];
+    tableVC.items = @[item];
+    [tableVC.tableView reloadData];
+    
+    // enable editing mode
+    tableVC.editing = YES;
+    
+    // get the cell from table view
+    ItemTableViewCell *cell = (ItemTableViewCell *)[tableVC.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
+    
+    // verify the cell
+    FBSnapshotVerifyView(cell, nil);
+}
+ ```
